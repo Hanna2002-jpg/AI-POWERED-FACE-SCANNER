@@ -1,0 +1,157 @@
+@import '~@angular/material/theming';
+
+// Define custom theme
+$custom-primary: mat-palette($mat-blue, 600);
+$custom-accent: mat-palette($mat-green, 500);
+$custom-warn: mat-palette($mat-red, 500);
+
+$custom-theme: mat-dark-theme((
+  color: (
+    primary: $custom-primary,
+    accent: $custom-accent,
+    warn: $custom-warn,
+  )
+));
+
+@include mat-core();
+@include mat-all-component-themes($custom-theme);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+  color: white;
+}
+
+body {
+  margin: 0;
+}
+
+// Custom scrollbar
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(71, 85, 105, 0.2);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(71, 85, 105, 0.5);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(71, 85, 105, 0.7);
+}
+
+// Material Design overrides for dark theme
+.mat-mdc-card {
+  background: rgba(30, 41, 59, 0.5) !important;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(71, 85, 105, 0.5) !important;
+  border-radius: 1rem !important;
+  color: white !important;
+}
+
+.mat-mdc-button {
+  border-radius: 0.5rem !important;
+}
+
+.mat-mdc-raised-button {
+  border-radius: 0.5rem !important;
+}
+
+.mat-mdc-tab-group {
+  background: transparent !important;
+}
+
+.mat-mdc-tab-header {
+  background: rgba(30, 41, 59, 0.5) !important;
+  backdrop-filter: blur(12px);
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.mat-mdc-tab {
+  color: #cbd5e1 !important;
+}
+
+.mat-mdc-tab.mdc-tab--active {
+  color: #60a5fa !important;
+}
+
+.mat-mdc-progress-bar {
+  border-radius: 4px !important;
+}
+
+.mat-mdc-snack-bar-container {
+  background: rgba(30, 41, 59, 0.95) !important;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(71, 85, 105, 0.5);
+  border-radius: 0.5rem !important;
+  color: white !important;
+}
+
+// Utility classes
+.text-center {
+  text-align: center;
+}
+
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.mt-4 {
+  margin-top: 1rem;
+}
+
+.p-4 {
+  padding: 1rem;
+}
+
+.rounded {
+  border-radius: 0.5rem;
+}
+
+.shadow {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+// Animation classes
+.fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.slide-in {
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}

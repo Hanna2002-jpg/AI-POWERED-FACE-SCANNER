@@ -1,0 +1,68 @@
+# Face Recognition Project Dependencies
+# ====================================
+
+# Core ML Libraries
+torch>=1.11.0
+torchvision>=0.12.0
+tensorflow>=2.8.0  # Alternative framework support
+numpy>=1.21.0
+scikit-learn>=1.0.0
+
+# Computer Vision
+opencv-python>=4.5.0
+Pillow>=8.3.0
+albumentations>=1.1.0  # Advanced data augmentation
+
+# Face Recognition Models
+facenet-pytorch>=2.5.0
+insightface>=0.6.0
+dlib>=19.22.0
+
+# Data Processing
+pandas>=1.3.0
+matplotlib>=3.5.0
+seaborn>=0.11.0
+plotly>=5.0.0  # Interactive visualizations
+
+# Metrics and Evaluation
+sklearn>=1.0.0
+scipy>=1.7.0
+
+# Configuration and Utilities
+pyyaml>=6.0
+tqdm>=4.62.0
+colorama>=0.4.4
+rich>=10.0.0  # Beautiful terminal output
+
+# Logging and Monitoring
+tensorboard>=2.8.0
+wandb>=0.12.0  # Experiment tracking (optional)
+
+# Report Generation
+jinja2>=3.0.0
+markdown>=3.3.0
+reportlab>=3.6.0  # PDF generation
+weasyprint>=54.0  # HTML to PDF conversion
+
+# Image Quality Assessment
+scikit-image>=0.18.0
+imutils>=0.5.4
+
+# Hashing and Integrity
+imagehash>=4.2.0
+hashlib2>=1.0.0  # Enhanced hashing utilities
+
+# Development and Testing
+pytest>=6.0.0
+pytest-cov>=2.12.0
+black>=21.0.0  # Code formatting
+flake8>=3.9.0  # Code linting
+mypy>=0.910  # Type checking
+
+# Documentation
+sphinx>=4.0.0
+sphinx-rtd-theme>=0.5.0
+
+# Jupyter Notebooks (for analysis)
+jupyter>=1.0.0
+ipykernel>=6.0.0
